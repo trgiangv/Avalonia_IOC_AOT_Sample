@@ -1,0 +1,13 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AvaloniaDryIocAot.ViewModels"
+        x:Class="AvaloniaDryIocAot.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Width="520" Height="240"
+        Title="Avalonia + DryIoc + NativeAOT (.NET 9)">
+  <StackPanel Margin="20" Spacing="12">
+    <TextBlock Text="Avalonia + DryIoc + NativeAOT (.NET 9)" FontSize="20" />
+    <TextBlock Text="{CompiledBinding Now}" />
+    <Button Content="Refresh Time" Command="{CompiledBinding RefreshCommand}" Width="160" />
+  </StackPanel>
+</Window>

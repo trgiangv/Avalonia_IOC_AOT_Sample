@@ -1,0 +1,22 @@
+<Window
+    x:Class="AvaloniaPureDIAot.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:AvaloniaPureDIAot.ViewModels"
+    Title="Avalonia + Pure.DI + NativeAOT (.NET 9)"
+    Width="520"
+    Height="240"
+    x:DataType="vm:MainWindowViewModel">
+    <StackPanel
+        Margin="20"
+        Spacing="12">
+        <TextBlock
+            FontSize="20"
+            Text="Avalonia + Pure.DI + NativeAOT (.NET 9)" />
+        <TextBlock Text="{CompiledBinding Now}" />
+        <Button
+            Width="160"
+            Command="{CompiledBinding RefreshCommand}"
+            Content="Refresh Time" />
+    </StackPanel>
+</Window>
